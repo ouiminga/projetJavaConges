@@ -21,7 +21,10 @@ public class Main {
 		ScooterElectrique scooterelectrique =new ScooterElectrique() ;
 		VehiculeElectrique vehiculeElectrique=new VehiculeElectrique() ;
 		VehiculeDeSocite vdesociete=new VehiculeDeSocite() ;
-
+		
+		Client moi1 =new Client() ;
+		Client moi2 =new Client("Ouim","Aziz","5 rue paul dautier") ;
+		moi1.decrisToi();moi2.decrisToi();
 	}
 
 }

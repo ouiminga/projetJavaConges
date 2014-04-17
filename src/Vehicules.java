@@ -6,12 +6,12 @@
  * @author Ouiminga
  *
  */
-public abstract class Vehicules {
+abstract class Vehicules {
 
 	/**
 	 * 
 	 */
-	public Vehicules() {
+	 abstract void Vehicules() {
 		// TODO Auto-generated constructor stub
 	}
 
