@@ -15,5 +15,8 @@ public class Monospace extends Voitures{
 		// TODO Auto-generated constructor stub
 		System.out.println("Monospace!");
 	}
-
+	
+	public void demarer(){
+		System.out.println("Berline !");
+	};
 }

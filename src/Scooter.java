@@ -15,5 +15,9 @@ public class Scooter extends DeuxRoues {
 		// TODO Auto-generated constructor stub
 		System.out.println("Scooter!");
 	}
+	
+	public void demarer(){
+		System.out.println("Berline !");
+	};
 
 }

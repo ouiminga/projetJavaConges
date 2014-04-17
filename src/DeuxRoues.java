@@ -7,13 +7,5 @@
  *
  */
 public abstract class DeuxRoues extends Vehicules{
-
-	/**
-	 * 
-	 */
-	public DeuxRoues() {
-		// TODO Auto-generated constructor stub
-		
-	}
-
+	protected abstract void demarer() ;
 }

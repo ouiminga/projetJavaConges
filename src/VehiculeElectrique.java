@@ -15,5 +15,9 @@ public class VehiculeElectrique  extends Voitures {
 		// TODO Auto-generated constructor stub
 		System.out.println("Vehicule electrique !");
 	}
+	
+	public void demarer(){
+		System.out.println("Berline !");
+	};
 
 }

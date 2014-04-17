@@ -11,8 +11,5 @@ abstract class Vehicules {
 	/**
 	 * 
 	 */
-	 abstract void Vehicules() {
-		// TODO Auto-generated constructor stub
-	}
-
+	protected abstract void demarer() ;
 }

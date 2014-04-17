@@ -15,5 +15,9 @@ public class VehiculeDeSocite extends Utilitaires {
 		// TODO Auto-generated constructor stub
 		System.out.println("Vehicule de société!");
 	}
+	
+	public void demarer(){
+		System.out.println("Berline !");
+	};
 
 }

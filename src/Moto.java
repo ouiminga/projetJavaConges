@@ -7,7 +7,6 @@
  *
  */
 public class Moto extends DeuxRoues{
-
 	/**
 	 * 
 	 */
@@ -16,4 +15,7 @@ public class Moto extends DeuxRoues{
 		System.out.println("Moto!");
 	}
 
+	public void demarer(){
+		System.out.println("Berline !");
+	};
 }

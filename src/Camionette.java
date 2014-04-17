@@ -15,5 +15,9 @@ public class Camionette extends Utilitaires{
 		// TODO Auto-generated constructor stub
 		System.out.println("Camionette !");
 	}
+	
+	public void demarer(){
+		System.out.println("Berline !");
+	};
 
 }

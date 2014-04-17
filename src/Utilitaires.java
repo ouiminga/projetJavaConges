@@ -7,12 +7,5 @@
  *
  */
 public abstract class Utilitaires {
-
-	/**
-	 * 
-	 */
-	public Utilitaires() {
-		// TODO Auto-generated constructor stub
-	}
-
+	protected abstract void demarer() ;
 }
