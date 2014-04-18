@@ -6,8 +6,9 @@
  * @author Ouiminga
  *
  */
-public class Client {
+import java.util.*;
 
+public class Client {
 	String nom;
 	String prenom;
 	String adresse;
@@ -15,12 +16,11 @@ public class Client {
 	 * 
 	 */
 	public Client() {
-		// TODO Auto-generated constructor stub
-		nom="Nom non init";
-		prenom="Prenom non init";
-		adresse="Adresse non init";
+		nom="Nom non initialisé";
+		prenom="Prenom non initialisé";
+		adresse="Adresse non initialisé";
 	}
-	
+
 	public Client(String initnom,String initprenom,String initadresse) {
 		// TODO Auto-generated constructor stub
 		nom=initnom;
@@ -37,10 +37,19 @@ public class Client {
 	 * 
 	 */
 	public void Login() {
-		// TODO Auto-generated constructor stub
-		nom="Nom non init";
-		prenom="Prenom non init";
-		adresse="Adresse non init";
+		Scanner scan = new Scanner(System.in);
+	    Scanner keyboard = new Scanner (System.in);
+	    String user = scan.nextLine();
+	    String pass = scan.nextLine(); // looks at selected file in scan
+
+	    String inpUser = keyboard.nextLine();
+	    String inpPass = keyboard.nextLine(); // gets input from user
+
+	    if (inpUser.equals(user) && inpPass.equals(pass)) {
+	        System.out.print("your login message");
+	    } else {
+	        System.out.print("your error message");
+	    }
 	}
 	
 	/**
@@ -48,9 +57,7 @@ public class Client {
 	 */
 	public void rechercherUnVehicule() {
 		// TODO Auto-generated constructor stub
-		nom="Nom non init";
-		prenom="Prenom non init";
-		adresse="Adresse non init";
+		
 	}
 	
 	/**
@@ -58,8 +65,6 @@ public class Client {
 	 */
 	public void louerVehicule() {
 		// TODO Auto-generated constructor stub
-		nom="Nom non init";
-		prenom="Prenom non init";
-		adresse="Adresse non init";
+		
 	}
 }
