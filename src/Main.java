@@ -10,12 +10,191 @@ import java.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 public class Main {
+	
+	public	void rechercheVehicule(String typeVehicule,String typeCarburant)
+	{
+		switch (typeVehicule)
+        {
+          case "Voitures":
+          case "voitures":
+            {
+            	switch (typeCarburant)
+  	        {
+  	          case "diesel":
+  	          case "Diesel":
+  	            {
+  	            	System.out.println("Les voitures à diesel");
+  	            	System.out.println(" berline\nmonospace\n");	    	      	        	  
+  	            };
+  	            break;
+  	          case "essence":
+  	          case "Essence":
+  	            {
+  	            	System.out.println("Les voitures à essence");
+  	            	System.out.println(" Citadines\nberline\n4x4\n");	    	      	        	  
+	    	        };
+  	            break; 
+  	          case "hybride":
+  	          case "Hybride":
+  	          	{
+  	            	System.out.println("Les voitures hybride");
+  	            	System.out.println("monospace\n");
+  	            };
+  		            break; 
+  	          case "electrique":
+  	          case "Electrique":
+  	          	{
+  	            	System.out.println("Les voitures électriques");
+  	            	System.out.println("véhicule électrique\n");
+  	            };
+  		            break;  
+  	          default:
+  	          	{
+  	            	System.out.println("Affichage de toutes les voitures");
+  	            	System.out.println(" Citadines\nberline\n4x4\nmonospace\nvéhicule électrique \n");
+  	            };           
+  	        }
+            };
+            break;
+          case "Utilitaires":
+          case "utilitaires":
+            {
+            	switch (typeCarburant)
+  	        {
+  	          case "diesel":
+  	          case "Diesel":
+  	            {
+  	            	System.out.println("Les Utilitaires à diesel");
+  	            	System.out.println("Camionnette\nVéhicule de société\n");
+  	            };
+  	            break;
+  	          case "essence":
+  	          case "Essence":
+  	            {
+  	            	System.out.println("Les Utilitaires à essence");
+  	            	System.out.println("Camionnette\n");
+  	            	
+  	            };
+  	            break; 
+  	          case "Hybride":
+  	          case "hybride":
+  	          	{
+  	            	System.out.println("Les Utilitaires hybride");
+  	            	System.out.println("Camionnette\nVéhicule de société\n");
+  	            };
+  		            break; 
+  	          case "electrique":
+  	          case "Electrique":
+  	          	{
+  	            	System.out.println("Les Utilitaires électriques");
+  	            	System.out.println("Véhicule de société\n");
+  	            };
+  		            break;  
+  	          default:
+  	          	{
+  	            	System.out.println("Affichage de tous les Utilitaires");
+  	            	System.out.println("Camionnette\nVéhicule de société\n");
+  	            };           
+  	        }
+            };
+            break; 
+          case "Deux roues":
+          case "deux roues":
+          {
+        	switch (typeCarburant)
+	        {
+	          case "diesel":
+	          case "Diesel":
+	            {
+	            	System.out.println("Les Deux roues à diesel");
+	            	System.out.println("Aucun\n");
+	        	};
+	            break;
+	          case "essence":
+	          case "Essence":
+	            {
+	            	System.out.println("Les Deux roues à essence");
+	            	System.out.println("Moto\nscooter\n");
+	            };
+	            break; 
+	          case "hybride":
+	          case "Hybride":
+	          	{
+	            	System.out.println("Les Deux roues hybride");
+	            	System.out.println("scooter\n");
+	            	
+	            };
+		            break; 
+	          case "electrique":
+	          case "Electrique":
+	          	{
+	            	System.out.println("Les Deux roues électriques");
+	            	System.out.println("scooter électrique\n");
+	            };
+		            break;  
+	          default:
+	          	{
+	            	System.out.println("Affichage de tous les deux roues");
+	            	System.out.println("Moto\nscooter\nscooter électrique\n");
+	            };           
+	        }
+          };
+	            break;  
+          default:
+          { /*Selectionner selon les carburant selman */
+        	switch (typeCarburant)
+	        {
+	          case "diesel":
+	          case "Diesel":
+	            {
+	            	System.out.println("Tous les vehicules à diesel");
+	            	System.out.println("berline\nmonospace\nCamionnette\nVéhicule de société\n");
+	            };
+	            break;
+	          case "essence":
+	          case "Essence":
+	            {
+	            	System.out.println("Tous les vehicules à essence");
+	            	System.out.println("Citadines\nberline\n4x4\nCamionnette\nMoto\nscooter\n");
+	            };
+	            break; 
+	          case "hybride":
+	          case "Hybride":
+	          	{
+	            	System.out.println("Tous les vehicules hybride");
+	            	System.out.println("monospace\nCamionnette\nVéhicule de société\nscooter\n");
+	            };
+		            break; 
+	          case "Electrique":
+	          case "electrique":
+	          	{
+	            	System.out.println("Tous les vehicules électriques");
+	            	System.out.println("véhicule électrique\nVéhicule de société\nscooter électrique\n");
+	            };
+		            break;  
+	          default:
+	          	{
+	            	System.out.println("Affichage de tous les vehicules");
+	            	System.out.println("Citadines, berline, 4x4, monospace, véhicule électrique\n"
+	            			+ "Camionnette, Véhicule de société\n"
+	            			+ "Moto, scooter, scooter électrique\n");
+	            };           
+	        }    	        	  
+          };             
+        }
+	}
+	public void rechercheVehicule(String typeVehicule,String carburants,String marque,String model)
+	{
+		
+	}
 		
 	public static void main(String[] args) {
 		ArrayList<Client> listClient = new ArrayList<Client>();
+		ArrayList<String> listId = new ArrayList<String>();
 		Scanner sc = new Scanner(System.in);
 		String premierChoix =new String("");
 		boolean bool;
+		Client nvoCl;
 		// TODO Auto-generated method stub
 		while ((!premierChoix.equals("quitter"))&&(!premierChoix.equals("q")))
 		{
@@ -39,8 +218,10 @@ public class Main {
     	          case "1":
     	            {	
     	            	System.out.println("Création d'un compte client");
-    	            	String id,password,nomNvoClient,prenomNvoClient,adresseNvoClient;
-    					Client nvoCl;
+    	            	String nomNvoClient,prenomNvoClient,adresseNvoClient;
+    	            	String idd,pwdd;
+    	            	boolean exist=false;
+    	            	//Client nvoCl;
     					System.out.println("Pour vous creer un compte client");
     					System.out.println("Entrez votre Nom de client");
     					nomNvoClient=sc.nextLine();
@@ -49,187 +230,70 @@ public class Main {
     					System.out.println("Entrez votre Adresse de client");
     					adresseNvoClient=sc.nextLine();
     					nvoCl=new Client(nomNvoClient,prenomNvoClient,adresseNvoClient);
+    					idd=nomNvoClient+prenomNvoClient;
+    					pwdd=nomNvoClient+adresseNvoClient.charAt(0);
+    					
+    					for(String s:listId)
+    					{
+    						if(s.equals(idd))
+    						{
+    						exist=true;
+    						System.out.println("Ce client existe déja");
+    						break;
+    						}
+    					}
+    					if(exist==false)
+						{ 
+    					System.out.println("Nouveau client");
     					listClient.add(nvoCl);
-    					System.out.println("Choisissez votre identifiant/nom client");
-    					id=sc.nextLine();
-    					System.out.println("Choisissez votre mot de passe client");
-    					password=sc.nextLine();
-    					nvoCl.initLogin(id,password);
-    					nvoCl.Login(id,password);
-    	            };
+						listId.add(idd);
+						}
+    					
+    					//nvoCl.Login(idd,pwdd);
+    				};
     	            break;
     	          case "2":
     	            {
     	            	System.out.println("Log in");
     	            	String id;String password;
+    	            	boolean existt=false;
+    	            	int curseur=0;
     					System.out.println("Entrez l'identifiant/nom");
     					id=sc.nextLine();
     					System.out.println("Entrez le mot de passe");
     					password=sc.nextLine();
-    					//bool=leClientDansLaliste.Login(firstName,password);
-    	            };
+    					
+    					for(String ss:listId)
+    					{ curseur++;	
+    						if(ss.equals(id))
+    						{
+    						existt=true;
+    						break;
+    						}
+    					}
+    					if(existt==true)
+						{ 
+    					System.out.println("Client authentifié");
+    					((Client)listClient.get(curseur)).Login(id,password);
+    					}
+    					else
+    					{
+    					System.out.println("Client non reconnu. Si vous n'avez pas de compte veuillez en créer");
+    					}
+    					
+    				};
     	            break; 
     	          case "3":
-    	        	  String typeVehicule,typeCarburant;
+    	        	  String typeVehicul_e,typeCarburan_t;Main mainn=new Main();
     	        	  System.out.println("Recherche un véhicule");
     	        	  System.out.println("Entrez le type de véhicule recherché");
     	        	  System.out.println("Voitures ,Utilitaires ou Deux roues ");
-    	        	  typeVehicule=sc.nextLine();
+    	        	  typeVehicul_e=sc.nextLine();
     	        	  System.out.println("Entrez le type de carburant recherché");
     	        	  System.out.println("diesel,essence,hybride et électrique");
-    	        	  typeCarburant=sc.nextLine();
-    	        	switch (typeVehicule)
-  	    	        {
-  	    	          case "Voitures":
-  	    	            {
-  	    	            	switch (typeCarburant)
-	    	    	        {
-	    	    	          case "diesel":
-	    	    	            {
-	    	    	            	System.out.println("Les voitures à diesel");
-	    	    	            	System.out.println(" berline\nmonospace\n");	    	      	        	  
-	    	    	            };
-	    	    	            break;
-	    	    	          case "essence":
-	    	    	            {
-	    	    	            	System.out.println("Les voitures à essence");
-	    	    	            	System.out.println(" Citadines\nberline\n4x4\n");	    	      	        	  
-		    	    	        };
-	    	    	            break; 
-	    	    	          case "hybride":
-	    	    	          	{
-	    	    	            	System.out.println("Les voitures hybride");
-	    	    	            	System.out.println("monospace\n");
-	    	    	            };
-	    	    		            break; 
-	    	    	          case "électrique":
-	    	    	          	{
-	    	    	            	System.out.println("Les voitures électriques");
-	    	    	            	System.out.println("véhicule électrique\n");
-	    	    	            };
-	    	    		            break;  
-	    	    	          default:
-	    	    	          	{
-	    	    	            	System.out.println("Affichage de toutes les voitures");
-	    	    	            	System.out.println(" Citadines\nberline\n4x4\nmonospace\nvéhicule électrique \n");
-	    	    	            };           
-	    	    	        }
-  	    	            };
-  	    	            break;
-  	    	          case "Utilitaires":
-  	    	            {
-  	    	            	switch (typeCarburant)
-	    	    	        {
-	    	    	          case "diesel":
-	    	    	            {
-	    	    	            	System.out.println("Les Utilitaires à diesel");
-	    	    	            	System.out.println("Camionnette\nVéhicule de société\n");
-	    	    	            };
-	    	    	            break;
-	    	    	          case "essence":
-	    	    	            {
-	    	    	            	System.out.println("Les Utilitaires à essence");
-	    	    	            	System.out.println("Camionnette\n");
-	    	    	            	
-	    	    	            };
-	    	    	            break; 
-	    	    	          case "hybride":
-	    	    	          	{
-	    	    	            	System.out.println("Les Utilitaires hybride");
-	    	    	            	System.out.println("Camionnette\nVéhicule de société\n");
-	    	    	            };
-	    	    		            break; 
-	    	    	          case "électrique":
-	    	    	          	{
-	    	    	            	System.out.println("Les Utilitaires électriques");
-	    	    	            	System.out.println("Véhicule de société\n");
-	    	    	            };
-	    	    		            break;  
-	    	    	          default:
-	    	    	          	{
-	    	    	            	System.out.println("Affichage de tous les Utilitaires");
-	    	    	            	System.out.println("Camionnette\nVéhicule de société\n");
-	    	    	            };           
-	    	    	        }
-  	    	            };
-  	    	            break; 
-  	    	          case "Deux roues":
-  	    	          {
-  	    	        	switch (typeCarburant)
-    	    	        {
-    	    	          case "diesel":
-    	    	            {
-    	    	            	System.out.println("Les Deux roues à diesel");
-    	    	            	System.out.println("Aucun\n");
-    	      	        	};
-    	    	            break;
-    	    	          case "essence":
-    	    	            {
-    	    	            	System.out.println("Les Deux roues à essence");
-    	    	            	System.out.println("Moto\nscooter\n");
-    	    	            };
-    	    	            break; 
-    	    	          case "hybride":
-    	    	          	{
-    	    	            	System.out.println("Les Deux roues hybride");
-    	    	            	System.out.println("scooter\n");
-    	    	            	
-    	    	            };
-    	    		            break; 
-    	    	          case "électrique":
-    	    	          	{
-    	    	            	System.out.println("Les Deux roues électriques");
-    	    	            	System.out.println("scooter électrique\n");
-    	    	            };
-    	    		            break;  
-    	    	          default:
-    	    	          	{
-    	    	            	System.out.println("Affichage de tous les deux roues");
-    	    	            	System.out.println("Moto\nscooter\nscooter électrique\n");
-    	    	            };           
-    	    	        }
-  	    	          };
-  	    		            break;  
-  	    	          default:
-  	    	          { /*Selectionner selon les carburant selman */
-  	    	        	switch (typeCarburant)
-    	    	        {
-    	    	          case "diesel":
-    	    	            {
-    	    	            	System.out.println("Tous les vehicules à diesel");
-    	    	            	System.out.println("berline\nmonospace\nCamionnette\nVéhicule de société\n");
-    	    	            };
-    	    	            break;
-    	    	          case "essence":
-    	    	            {
-    	    	            	System.out.println("Tous les vehicules à essence");
-    	    	            	System.out.println("Citadines\nberline\n4x4\nCamionnette\nMoto\nscooter\n");
-    	    	            };
-    	    	            break; 
-    	    	          case "hybride":
-    	    	          	{
-    	    	            	System.out.println("Tous les vehicules hybride");
-    	    	            	System.out.println("monospace\nCamionnette\nVéhicule de société\nscooter\n");
-    	    	            };
-    	    		            break; 
-    	    	          case "électrique":
-    	    	          	{
-    	    	            	System.out.println("Tous les vehicules électriques");
-    	    	            	System.out.println("véhicule électrique\nVéhicule de société\nscooter électrique\n");
-    	    	            };
-    	    		            break;  
-    	    	          default:
-    	    	          	{
-    	    	            	System.out.println("Affichage de tous les vehicules");
-    	    	            	System.out.println("Citadines, berline, 4x4, monospace, véhicule électrique\n"
-    	    	            			+ "Camionnette, Véhicule de société\n"
-    	    	            			+ "Moto, scooter, scooter électrique\n");
-    	    	            };           
-    	    	        }    	        	  
-  	    	          };             
-  	    	        }
-    	        	  //Vehicule.rechercheTypeVehicule(typeVehicule,typeCarburant);
-    		            break;
+    	        	  typeCarburan_t=sc.nextLine();
+    	        	  mainn.rechercheVehicule(typeVehicul_e,typeCarburan_t);
+      	              break;
     	          case "4":
     	        	  System.out.println("Louer un véhicule");
     	        	  System.out.println("Pour louer un véhicule "
@@ -248,8 +312,6 @@ public class Main {
 				//premierChoix=mainClient();
 				}
 			};
-			
-			
 		}
 		System.out.println("Fin du programme");
 	}

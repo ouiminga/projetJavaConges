@@ -12,9 +12,9 @@ public class Client {
 	String nom;
 	String prenom;
 	String adresse;
-	String clientId;
-	String clientPassword;
-	
+	String clientId=new String("");
+	String clientPassword=new String("");
+		
 	/**
 	 * Les deux méthodes sont les constructeurs
 	 */
@@ -29,12 +29,16 @@ public class Client {
 		nom=initnom;
 		prenom=initprenom;
 		adresse=initadresse;
+		clientId=nom+prenom;
+		clientPassword=nom+adresse.charAt(0);
+		System.out.println("Votre identifiant Login est "+ clientId);
+		System.out.println("password="+clientPassword);
 	}
 	
 	/**
 	 * Les deux méthodes sont les constructeurs
 	 */
-	public static String mainClient() {
+	private static String mainClient() {
 		return "quitter" ;
 	}
 	
@@ -52,98 +56,30 @@ public class Client {
 	/**
 	 * 
 	 */
-	public boolean Login(String firstName,String password) {
+	//public boolean Login(String firstName,String password) {
+	public boolean Login(String id,String pwd) {
 		Scanner scan = new Scanner(System.in);
 	    String choixAction,choiTypeVehicule,choixCarburant;
 	    
-	    if (firstName.equals(clientId) && password.equals(clientPassword)) {
-	        System.out.println("login accepté");
+	    if (id.equals(clientId) && pwd.equals(clientPassword)) {
+	        System.out.println("Vous êtes logué");
 	        System.out.println("Que voulez vous faire ?");
-	        System.out.println("1 .Rechercher un véhicule par plusieurs \n "
-	        					+ "critères critères (Type de véhicule et \n"
-	        					+ " carburants (diesel,essence, hybride \n"
-	        					+ "et électrique))? ou \n" );
-	        System.out.println("2 .Louer un véhicule avec date de location \n"
-	        					+ "et de restitution et nombre de kilométrage\n"
-	        					+ "par location") ;
+	        System.out.println("Tapez 1 pour Recherche un véhicule");
+	        System.out.println("Tapez 2 pour Louer un véhicule");
 	        choixAction=scan.nextLine();
 	        switch (choixAction)
 	        {
 	          case "1":
-	            {
-	            	System.out.println("Entrez le type de vehicule");
-	            	System.out.println("voiture , utilitaires ou deuxRoues");
-	            	choiTypeVehicule=scan.nextLine();
-	            	System.out.println("Entrez le type de carburant");
-	            	System.out.println("diesel , essence ou hybride");
-	            	choixCarburant=scan.nextLine();
-	            	switch (choiTypeVehicule)
-	    	        {
-	    	          case "voiture":
-	    	            {
-	    	            	switch (choixCarburant)
-	    	    	        {
-	    	    	          case "diesel":
-	    	    	            {
-	    	    	            };
-	    	    	            break;
-	    	    	          case "essence":
-	    	    	            {
-	    	    	            };
-	    	    	            break; 
-	    	    	          case "hybride":
-	    	    		            /*Action*/;
-	    	    		            break;  
-	    	    	          default:
-	    	    	            /*Action*/;             
-	    	    	        }
-	    	            };
-	    	            break;
-	    	          case "utilitaires":
-	    	            {
-	    	            	switch (choixCarburant)
-	    	    	        {
-	    	    	          case "diesel":
-	    	    	            {
-	    	    	            };
-	    	    	            break;
-	    	    	          case "essence":
-	    	    	            {
-	    	    	            };
-	    	    	            break; 
-	    	    	          case "hybride":
-	    	    		            /*Action*/;
-	    	    		            break;  
-	    	    	          default:
-	    	    	            /*Action*/;             
-	    	    	        }
-	    	            };
-	    	            break; 
-	    	          case "deuxRoues":
-	    		            {
-	    		            	switch (choixCarburant)
-	    		    	        {
-	    		    	          case "diesel":
-	    		    	            {
-	    		    	            };
-	    		    	            break;
-	    		    	          case "essence":
-	    		    	            {
-	    		    	            };
-	    		    	            break; 
-	    		    	          case "hybride":
-	    		    		            /*Action*/;
-	    		    		            break;  
-	    		    	          default:
-	    		    	            /*Action*/;             
-	    		    	        }
-	    		            };
-	    		            break;  
-	    	          default:
-	    	            /*Action*/;             
-	    	        }
-	            };
-	            break; 
+	        	  String typeVehicul_e,typeCarburan_t;Main mainn=new Main();
+	        	  System.out.println("Recherche un véhicule");
+	        	  System.out.println("Entrez le type de véhicule recherché");
+	        	  System.out.println("Voitures ,Utilitaires ou Deux roues ");
+	        	  typeVehicul_e=scan.nextLine();
+	        	  System.out.println("Entrez le type de carburant recherché");
+	        	  System.out.println("diesel,essence,hybride et électrique");
+	        	  typeCarburan_t=scan.nextLine();
+	        	  mainn.rechercheVehicule(typeVehicul_e,typeCarburan_t);
+  	              break;
 	          case "2":
 		            /*Action*/;
 		            break;  
@@ -155,6 +91,7 @@ public class Client {
 	    }
 	    else {
 	        System.out.print("login refusé");
+	        System.out.print("identifiant ou mot de passe erroné");
 	        return false;
 	    }
 	}
@@ -191,10 +128,24 @@ public class Client {
 		return prenom;
 	}
 	/**
-	 * retourne le nom du client
+	 * retourne l'adresse du client
 	 */
-	public String getAdresse() {
+	public String getId() {
 		// TODO Auto-generated constructor stub
 		return adresse;
+	}
+	
+	/**
+	 * retourne l'adresse du client
+	 */
+	public String getPwd(){
+		return clientId;
+	}
+	
+	/**
+	 * retourne l'adresse du client
+	 */
+	public String getAdresse(){
+		return clientPassword;
 	}
 }
