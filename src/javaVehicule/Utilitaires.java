@@ -1,19 +1,12 @@
-package javaVehicule;
-/**
- * @author Ouiminga
- *
- */
-public abstract class Utilitaires {
-	abstract void demarer() ;
-		//setters
-		abstract void setTypeDeVehicule();
-		abstract void setCarburant();
-		abstract void setMarque();
-		abstract void setModel();
-		
-		//getters
-		abstract String getTypeDeVehicule();
-		abstract String getCarburant();
-		abstract String getMarque();
-		abstract String getModel();
+
+public class Utilitaires extends Vehicule {
+
+	public Utilitaires(String type,String carburant, String model) {
+		this.carburant=carburant;
+		this.model=model;
+		this.type=type;
+		status=0;
+		num +=num;
+	}
+
 }
