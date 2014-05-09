@@ -25,7 +25,6 @@ import javax.swing.SpringLayout;
 public class Entree extends JDialog {
 	JComboBox comboBox = new JComboBox();
 	private final JLabel lblNewLabel = new JLabel("Vous etes?");
-	
 	/**
 	 * Launch the application.
 	 */
@@ -38,7 +37,6 @@ public class Entree extends JDialog {
 			e.printStackTrace();
 		}
 	}
-
 	/**
 	 * Create the dialog.
 	 */
@@ -69,7 +67,6 @@ public class Entree extends JDialog {
 				gestC.setVisible(true); 
 				JLabel labell = new JLabel("Welcome:");
 				gestC.getContentPane().add(labell);
-
 				}
 			}
 		});

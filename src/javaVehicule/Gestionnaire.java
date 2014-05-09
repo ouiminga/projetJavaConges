@@ -76,8 +76,8 @@ public class Gestionnaire extends JDialog {
 					Ajouter un véhicule au parc.
 					Supprimer un véhicule du parc.*/
 					  case "Rechercher un véhicule par plusieurs critères" :
-						//RechercheVehiculeParNbreuxCritere rechercheVehiculeParNbreuxCritere = new RechercheVehiculeParNbreuxCritere();
-						//rechercheVehiculeParNbreuxCritere.setVisible(true);
+						RechercheVehiculeParNbreuxCritere rechercheVehiculeParNbreuxCritere = new RechercheVehiculeParNbreuxCritere();
+						rechercheVehiculeParNbreuxCritere.setVisible(true);
 						break; 
 					  case "Afficher un listing complet du parc auto":
 						  AfficherListingCompletDuParcAuto afficherListingCompletDuParcAuto = new AfficherListingCompletDuParcAuto();
