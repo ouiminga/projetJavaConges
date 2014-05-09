@@ -1,0 +1,19 @@
+package javaVehicule;
+/**
+ * @author Ouiminga
+ *
+ */
+public abstract class Utilitaires {
+	abstract void demarer() ;
+		//setters
+		abstract void setTypeDeVehicule();
+		abstract void setCarburant();
+		abstract void setMarque();
+		abstract void setModel();
+		
+		//getters
+		abstract String getTypeDeVehicule();
+		abstract String getCarburant();
+		abstract String getMarque();
+		abstract String getModel();
+}
